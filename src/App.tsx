@@ -21,6 +21,7 @@ function App() {
       </div>
       <div>
        <img src={tg.initDataUnsafe?.user?.photo_url} alt='user'/>
+       {tg.initDataUnsafe?.user?.photo_url}
       </div>
       <button onClick={onClose}>close</button>
     </div>
