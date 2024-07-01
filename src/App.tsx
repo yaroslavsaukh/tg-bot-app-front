@@ -21,10 +21,6 @@ function App() {
       <div>
         Your username: {tg.initDataUnsafe?.user?.username}
       </div>
-      <div>
-       <img src={tg.initDataUnsafe?.user?.photo_url} alt='user'/>
-       {tg.initDataUnsafe?.user?.photo_url}
-      </div>
       <span>{localStorage.getItem('text')}</span>
       <button onClick={onClose}>close</button>
     </div>
