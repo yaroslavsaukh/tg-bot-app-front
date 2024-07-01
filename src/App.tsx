@@ -8,6 +8,8 @@ function App() {
 
   useEffect(() => {
     tg.ready();
+    localStorage.setItem('text', 'local storage data')
+    tg.sendData({val: 'data for bot'})
   },[])
 
   return (
@@ -23,6 +25,7 @@ function App() {
        <img src={tg.initDataUnsafe?.user?.photo_url} alt='user'/>
        {tg.initDataUnsafe?.user?.photo_url}
       </div>
+      <span>{localStorage.getItem('text')}</span>
       <button onClick={onClose}>close</button>
     </div>
   );
