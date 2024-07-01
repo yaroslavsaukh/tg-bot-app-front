@@ -20,7 +20,7 @@ function App() {
         Your username: {tg.initDataUnsafe?.user?.username}
       </div>
       <div>
-       <img src={tg.initDataUnsafe?.user?.photo_url} alt='photo'/>
+       <img src={tg.initDataUnsafe?.user?.photo_url} alt='user'/>
       </div>
       <button onClick={onClose}>close</button>
     </div>
