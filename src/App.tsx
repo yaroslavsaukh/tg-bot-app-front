@@ -9,7 +9,6 @@ function App() {
   useEffect(() => {
     tg.ready();
     localStorage.setItem('text', 'local storage data')
-    tg.sendData({val: 'data for bot'})
   },[])
 
   return (
