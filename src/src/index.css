@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind utilities;
+
+.remove-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.remove-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.react-tabs__tab--selected {
+    @apply bg-gray-500/10;
+}
+
+
