@@ -1,6 +1,6 @@
 import { ReactComponent as CastIcon } from 'assets/svg/cast.svg';
 import { ReactComponent as CompassIcon } from 'assets/svg/compass.svg';
-import { Button, ButtonVariants } from 'shared';
+import { Button, ButtonVariants, Countdown } from 'shared';
 
 export const Clicker = () => {
   return (
@@ -12,7 +12,9 @@ export const Clicker = () => {
         <CastIcon className="w-16 h-16" />
       </div>
       <div className="flex flex-col gap-4 items-center">
-        <span>Time left: 1h 37m 16s</span>
+        <span>
+          Time left: <Countdown />
+        </span>
         <Button variant={ButtonVariants.OUTLINED} className="py-4 px-12 w-full">
           CLAIM 555 GWTC
         </Button>

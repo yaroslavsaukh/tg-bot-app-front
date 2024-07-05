@@ -5,6 +5,7 @@ export { Button } from './components/Button';
 export { Link } from './components/Link';
 export { TitleWithSubtitle } from './components/TitleWithSubtitle';
 export { Modal } from './components/Modal';
+export { Countdown } from './components/Countdown';
 
 export { ButtonVariants } from './types/button.interfaces';
 export { LinkVariants } from './types/link.interfaces';

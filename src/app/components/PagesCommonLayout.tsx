@@ -8,7 +8,7 @@ export const PagesCommonLayout = () => {
       <main className="flex flex-col flex-1 overflow-x-hidden overflow-y-auto remove-scrollbar">
         <Outlet />
       </main>
-      <footer className="mt-4 bg-white">
+      <footer>
         <TabBar />
       </footer>
     </div>
