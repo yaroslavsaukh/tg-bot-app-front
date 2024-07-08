@@ -1,8 +1,8 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import { userReducer } from 'shared';
+import { userReducer, taskReducer, tierReducer, leaderboardReducer } from 'shared';
 
-const rootReducer = combineReducers({ userReducer });
+const rootReducer = combineReducers({ userReducer, taskReducer, tierReducer, leaderboardReducer });
 
 export const store = configureStore({
   reducer: rootReducer,

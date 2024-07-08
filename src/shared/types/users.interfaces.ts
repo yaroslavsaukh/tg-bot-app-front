@@ -7,4 +7,5 @@ export interface User {
   language_code?: string;
   is_premium?: boolean;
   photo_url?: string;
+  balance: number;
 }

@@ -11,7 +11,7 @@ export const asyncGetUser = createAsyncThunk(
   async (payload: User, { rejectWithValue }) => {
     try {
       const response = await usersApi.getUser(payload);
-      return response.data;
+      return response.data.user;
     } catch (e) {
       showServerError(e);
       return rejectWithValue(e);

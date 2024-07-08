@@ -18,7 +18,7 @@ export const App = () => {
     tg.ready();
     tg.expand();
     eruda.init();
-    dispatch(asyncGetUser(tg?.initDataUnsafe?.user));
+    dispatch(asyncGetUser({ id: 12341234, ...tg?.initDataUnsafe?.user }));
   }, [tg, dispatch]);
 
   return (

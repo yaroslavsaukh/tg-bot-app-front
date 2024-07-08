@@ -7,7 +7,7 @@ export class UsersApi {
   constructor(private url: string) {}
 
   getUser(payload: User, config?: AxiosRequestConfig) {
-    return httpApiClient.post<User>(`${this.url}`, payload, config);
+    return httpApiClient.post<{ user: User }>(`${this.url}`, payload, config);
   }
 }
 

@@ -1,14 +1,15 @@
 import cn from 'classnames';
 
 import { LeaderboardCard } from 'entities/community';
+import { User } from 'shared';
 
 interface Props {
   title?: string;
   isTitleUnstyled?: boolean;
-  count?: number;
+  data: User[];
 }
 
-export const LeaderboardList = ({ title, isTitleUnstyled, count = 10 }: Props) => {
+export const LeaderboardList = ({ title, isTitleUnstyled, data }: Props) => {
   return (
     <div className="flex flex-col gap-2">
       {title && (
@@ -20,8 +21,8 @@ export const LeaderboardList = ({ title, isTitleUnstyled, count = 10 }: Props) =
           {title}
         </span>
       )}
-      {Array.from({ length: count }, (_, i) => (
-        <LeaderboardCard key={i} position={i + 1} />
+      {data.map((leaderboardItem, index) => (
+        <LeaderboardCard key={leaderboardItem.id} position={index + 1} data={leaderboardItem} />
       ))}
     </div>
   );

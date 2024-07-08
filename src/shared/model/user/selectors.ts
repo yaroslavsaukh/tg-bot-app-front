@@ -4,6 +4,6 @@ import { RootState } from 'app';
 
 const selectState = (x: RootState) => x.userReducer;
 
-export const selectCity = createSelector(selectState, ({ user }) => user);
+export const selectUser = createSelector(selectState, ({ user }) => user);
 
-export const selectIsLoading = createSelector(selectState, ({ isLoading }) => isLoading);
+export const selectIsUserLoading = createSelector(selectState, ({ isLoading }) => isLoading);

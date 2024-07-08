@@ -1,18 +1,25 @@
 import { ReactComponent as PlaceholderIcon } from 'assets/svg/placeholder.svg';
+import { User } from 'shared';
 
 interface Props {
   position: number;
+  data: User;
 }
 
-export const LeaderboardCard = ({ position }: Props) => {
+export const LeaderboardCard = ({ position, data }: Props) => {
   return (
     <div className="flex justify-between p-2 rounded-md border items-center">
       <div className="flex gap-4 items-center">
         <span>{position}</span>
-        <PlaceholderIcon className="w-8 h-8" />
-        <span>USERNAME</span>
+        {data?.photo_url ? (
+          <img src={data.photo_url} alt="avatar" className="w-8 h-8 rounded-md" />
+        ) : (
+          <PlaceholderIcon className="w-8 h-8" />
+        )}
+
+        <span>{data?.username ?? data.first_name}</span>
       </div>
-      <span>18537 GWTC</span>
+      <span>{data?.balance} GWTC</span>
     </div>
   );
 };
