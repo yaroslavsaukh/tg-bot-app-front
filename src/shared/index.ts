@@ -1,5 +1,6 @@
 export { useAppDispatch } from './lib/hooks/useAppDispatch';
 export { useAppSelector } from './lib/hooks/useAppSelector';
+export { useOpen } from './lib/hooks/useOpen';
 
 export { Button } from './components/Button';
 export { Link } from './components/Link';
@@ -13,4 +14,6 @@ export type { SVGComponent } from './types/svg.interfaces';
 
 export { AppRoutes } from './constants/app-routes';
 
-export { useOpen } from './lib/hooks/useOpen';
+export { userReducer } from './model/user/slice';
+export * from './model/user/action';
+export * from './model/user/selectors';

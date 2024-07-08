@@ -1,11 +1,15 @@
 import { useEffect } from 'react';
 
+import eruda from 'eruda';
 import { Route, Routes } from 'react-router-dom';
+
+import { asyncGetUser, useAppDispatch } from 'shared';
 
 import { PagesCommonLayout } from './PagesCommonLayout';
 import { ROUTES } from '../constants/routes';
 
 export const App = () => {
+  const dispatch = useAppDispatch();
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const tg = window?.Telegram.WebApp;
@@ -13,7 +17,9 @@ export const App = () => {
   useEffect(() => {
     tg.ready();
     tg.expand();
-  }, [tg]);
+    eruda.init();
+    dispatch(asyncGetUser(tg?.initDataUnsafe?.user));
+  }, [tg, dispatch]);
 
   return (
     <Routes>

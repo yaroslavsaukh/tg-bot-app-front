@@ -3,7 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { differenceInSeconds } from 'date-fns';
 
 export const Countdown: React.FC = () => {
-  const targetDate = useMemo(() => new Date('2024-07-08T00:00:00Z'), []);
+  const targetDate = useMemo(() => new Date('2024-07-12T00:00:00Z'), []);
   const [timeLeft, setTimeLeft] = useState<number>(differenceInSeconds(targetDate, new Date()));
 
   useEffect(() => {
