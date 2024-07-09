@@ -2,7 +2,7 @@ import axios, { AxiosInstance, CreateAxiosDefaults } from 'axios';
 
 function createHttpClient(endPoint = ''): AxiosInstance {
   const instance = axios.create({
-    baseURL: `${process.env.REACT_APP_APP_URL}${endPoint}`,
+    baseURL: `http://37.27.182.139:4000${endPoint}`,
     timeout: 0
   } as CreateAxiosDefaults);
 

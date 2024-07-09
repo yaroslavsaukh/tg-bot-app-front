@@ -1,6 +1,7 @@
 export { useAppDispatch } from './lib/hooks/useAppDispatch';
 export { useAppSelector } from './lib/hooks/useAppSelector';
 export { useOpen } from './lib/hooks/useOpen';
+export { useBendEffect } from './lib/hooks/useBendEffect';
 
 export { Button } from './components/Button';
 export { Link } from './components/Link';

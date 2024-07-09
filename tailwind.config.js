@@ -10,6 +10,17 @@ module.exports = {
       gridTemplateRows: {
         0: '0fr',
         auto: '1fr'
+      },
+      animation: {
+        bump: 'bump 0.5s linear'
+      },
+      keyframes: {
+        bump: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '25%': { transform: 'scale(0.9)' },
+          '50%': { transform: 'scale(1.1)' },
+          '75%': { transform: 'scale(0.9)' }
+        }
       }
     }
   },
